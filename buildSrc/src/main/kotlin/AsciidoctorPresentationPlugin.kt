@@ -47,7 +47,7 @@ class AsciidoctorPresentationPlugin : Plugin<Project> {
         val downloadTask = createDownloadTask(extension, templateDir, revealJsDir, project)
 
         configureAsciidoctorTask(downloadTask, extension, templateDir, revealJsDir)
-        configureGitHubPublishing(extension, outputDir.dir("reveal.js"))
+        configureGitHubPublishing(extension, outputDir.dir("revealjs"))
     }
 
     private

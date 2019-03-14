@@ -38,6 +38,8 @@ presentation {
 }
 ```
 
+Then the presentation is going to be available at `https://yourUserName.github.io/yourRepoName/`
+
 ## Screencasts
 
 This template supports screencasts in the [asciinema](https://asciinema.org/) format.
