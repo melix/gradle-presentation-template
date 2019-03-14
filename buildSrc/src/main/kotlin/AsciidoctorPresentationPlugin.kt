@@ -1,4 +1,3 @@
-
 import com.github.jrubygradle.JRubyPlugin
 import org.ajoberstar.gradle.git.ghpages.GithubPagesPlugin
 import org.ajoberstar.gradle.git.ghpages.GithubPagesPluginExtension
@@ -22,7 +21,9 @@ import org.ysb33r.gradle.vfs.VfsProxy
 import java.io.File
 
 class AsciidoctorPresentationPlugin : Plugin<Project> {
-    val GROUP = "Asciidoctor Presentation"
+    companion object {
+        const val GROUP = "Asciidoctor Presentation"
+    }
 
     override
     fun apply(project: Project) = project.run {
@@ -80,7 +81,7 @@ class AsciidoctorPresentationPlugin : Plugin<Project> {
                 dependsOn(downloadTask, tasks.getByName("jrubyPrepare"))
 
                 attributes(mapOf(
-                        "source-highlighter" to "highlightjs",
+                        "source-highlighter" to extension.highlighter.get(),
                         "imagesdir" to "./images",
                         "buildsdir" to "../../../scripts",
                         "toc" to "left",

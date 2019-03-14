@@ -10,6 +10,7 @@ open class PresentationExtension(project: Project) {
     val width = project.convention(1280)
     val heigth = project.convention(700)
     val theme = project.convention("gradle")
+    val highlighter = project.convention("highlightjs")
 
     private
     inline fun <reified T> Project.property() = objects.property(T::class.java)
