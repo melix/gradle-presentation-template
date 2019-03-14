@@ -4,4 +4,5 @@ plugins {
 
 presentation {
     githubUserName.set("melix")
+    githubRepoName.set("gradle-presentation-template")
 }
