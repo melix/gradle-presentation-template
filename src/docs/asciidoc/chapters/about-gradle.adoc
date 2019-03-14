@@ -1,0 +1,52 @@
+== What is Gradle?
+
+=== Gradle's purpose
+
+Gradle is a build and automation tool.
+
+[%step]
+* JVM based
+* Implemented in Java
+* 100% Free Open Source - Apache Standard License 2.0
+
+=== Agnostic Build System
+
+* Java ecosystem
+** Groovy, Kotlin, Scala, ...
+* Native ecosystem
+** C, C++, Swift, ...
+* Android
+* Misc
+** Go, Asciidoctor, ...
+
+=== Gradle in figures
+
+[%step]
+* 7.0M downloads / month
+* https://techcrunch.com/2017/04/07/tracking-the-explosive-growth-of-open-source-software/[#17 OSS projects worldwide]
+* 35+ Gradle Engineers
+* 300K builds/week @LinkedIn
+
+=== Gradle Inc.
+
+The company behind Gradle.
+
+[%step]
+* Build Happiness
+* Employs full time engineers
+* Providing Gradle Build Scans and Gradle Enterprise
+* (Gradle consulting, support, development services etc.)
+* (Training: online, public and in-house)
+
+=== Gradle is hiring!
+
+* Fully distributed development team
+* Exciting project used by millions
+* Build tool team and Gradle enterprise positions
+
+If anything you hear from now on sounds like a great problem to solve,
+
+Talk to us!
+
+* https://gradle.com/careers/
+* or meet us at the booth!
