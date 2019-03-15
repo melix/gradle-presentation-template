@@ -1,7 +1,7 @@
 # Asciidoctor/Reveal.js presentation template
 
 This is a template project for Asciidoctor+Reveal.js presentations.
-To use it, just clone this repository and update the presentation as you wish.
+To use it, just fork this repository and update the presentation as you wish.
 
 ## Configuration
 
