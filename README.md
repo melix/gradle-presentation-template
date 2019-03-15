@@ -13,6 +13,12 @@ presentation {
 }
 ```
 
+and change the name of the project in `settings.gradle.kts`:
+
+```
+rootProject.name = "my-awesome-presentation"
+```
+
 ## Generating the presentation
 
 Run:
@@ -48,3 +54,21 @@ Include your JSON files in `src/docs/asciidoc/screencasts`, then include them in
 ```
 screencast:my_file[]
 ```
+
+## Exporting the presentation
+
+This template supports exporting the presentation to PDF, JPEG and PNG.
+You'll need a JDK which bundles JavaFX to do this.
+Run this task:
+
+```
+./gradlew exportToPdf
+```
+
+to generate a PDF, or:
+
+```
+./gradlew export
+```
+
+to export to all formats.

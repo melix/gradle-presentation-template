@@ -12,6 +12,7 @@ import org.gradle.api.file.Directory
 import org.gradle.api.plugins.JavaBasePlugin
 import org.gradle.api.plugins.PluginManager
 import org.gradle.api.provider.Provider
+import org.gradle.api.tasks.JavaExec
 import org.gradle.api.tasks.TaskProvider
 import org.gradle.api.tasks.util.PatternSet
 import org.gradle.kotlin.dsl.delegateClosureOf
@@ -44,11 +45,46 @@ class AsciidoctorPresentationPlugin : Plugin<Project> {
         val revealJsDir = downloadsDir.dir("revealjs")
 
         val outputDir = objects.directoryProperty().convention(layout.buildDirectory.dir("asciidoc"))
+        val asciidocRevealOut = outputDir.dir("revealjs")
 
         val downloadTask = createDownloadTask(extension, templateDir, revealJsDir, project)
 
         configureAsciidoctorTask(downloadTask, extension, templateDir, revealJsDir)
-        configureGitHubPublishing(extension, outputDir.dir("revealjs"))
+        configureGitHubPublishing(extension, asciidocRevealOut)
+        createExportTasks(project, extension, outputDir, asciidocRevealOut)
+    }
+
+    private
+    fun Project.createExportTasks(project: Project, extension: PresentationExtension, outputDir: Provider<Directory>, asciidocRevealOut: Provider<Directory>) {
+        val exportConfig = configurations.maybeCreate("exportation")
+        dependencies {
+            "exportation"("me.champeau.deck2pdf:deck2pdf:0.3.0")
+        }
+        val exportTask = tasks.register("export") {
+            group = GROUP
+            description = "Exports the presentation to various formats (PDF, PNG, ...)"
+        }
+        listOf("pdf", "jpeg", "png").forEach { type ->
+            val baseTypeDir = "${outputDir.get().asFile}/export/${type}"
+
+            val gentask = tasks.register("exportTo${type.capitalize()}", JavaExec::class.java) {
+                group = GROUP
+                description = "Exports the presentation to ${type}"
+                dependsOn("asciidoctor")
+                main = "me.champeau.deck2pdf.Main"
+                workingDir = asciidocRevealOut.get().asFile
+                args = listOf("index.html", "$baseTypeDir/${project.name}.$type", "--profile=revealjs", "--width=${extension.width.get()}", "--height=${extension.heigth.get()}")
+                classpath = exportConfig
+
+                inputs.file("$workingDir/index.html")
+                outputs.dir(baseTypeDir)
+
+                doFirst {
+                    file(baseTypeDir).mkdirs()
+                }
+            }
+            exportTask.configure { dependsOn(gentask) }
+        }
     }
 
     private

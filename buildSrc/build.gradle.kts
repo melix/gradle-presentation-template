@@ -12,6 +12,7 @@ dependencies {
     compile("org.ysb33r.gradle:vfs-gradle-plugin:1.0")
     compile("commons-httpclient:commons-httpclient:3.1")
     compile("org.ajoberstar:gradle-git:1.1.0")
+    compile("me.champeau.deck2pdf:deck2pdf:0.3.0")
     compileOnly("org.asciidoctor:asciidoctorj:1.5.6")
 
     components.all(RemoveGroovyRule::class.java)
