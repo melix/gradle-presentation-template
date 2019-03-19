@@ -64,6 +64,10 @@ include::chapters/about-gradle.adoc[]
 
 screencast:step1[]
 
+== Another screencast
+
+screencast:step2[]
+
 == Conclusion
 
 === Gradle Enterprise
