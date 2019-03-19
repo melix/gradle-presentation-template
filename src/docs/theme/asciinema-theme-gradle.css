@@ -1,0 +1,107 @@
+.asciinema-theme-gradle .asciinema-terminal {
+    color: #02303A; /* default text color */
+    background-color: #F7F7F8; /* terminal background color */
+    border-color: #02303A;
+}
+.asciinema-theme-gradle .fg-bg { /* inverse for default text color */
+    color: #F7F7F8;
+}
+.asciinema-theme-gradle .bg-fg { /* inverse for terminal background color */
+    background-color: #02303A;
+}
+.asciinema-theme-gradle .fg-0 {
+    color: #073642;
+}
+.asciinema-theme-gradle .bg-0 {
+    background-color: #073642;
+}
+.asciinema-theme-gradle .fg-1 {
+    color: #dc322f;
+}
+.asciinema-theme-gradle .bg-1 {
+    background-color: #dc322f;
+}
+.asciinema-theme-gradle .fg-2 {
+    color: #859900;
+}
+.asciinema-theme-gradle .bg-2 {
+    background-color: #859900;
+}
+.asciinema-theme-gradle .fg-3 {
+    color: #b58900;
+}
+.asciinema-theme-gradle .bg-3 {
+    background-color: #b58900;
+}
+.asciinema-theme-gradle .fg-4 {
+    color: #268bd2;
+}
+.asciinema-theme-gradle .bg-4 {
+    background-color: #268bd2;
+}
+.asciinema-theme-gradle .fg-5 {
+    color: #d33682;
+}
+.asciinema-theme-gradle .bg-5 {
+    background-color: #d33682;
+}
+.asciinema-theme-gradle .fg-6 {
+    color: #2aa198;
+}
+.asciinema-theme-gradle .bg-6 {
+    background-color: #2aa198;
+}
+.asciinema-theme-gradle .fg-7 {
+    color: #eee8d5;
+}
+.asciinema-theme-gradle .bg-7 {
+    background-color: #eee8d5;
+}
+.asciinema-theme-gradle .fg-8 {
+    color: #002b36;
+}
+.asciinema-theme-gradle .bg-8 {
+    background-color: #002b36;
+}
+.asciinema-theme-gradle .fg-9 {
+    color: #cb4b16;
+}
+.asciinema-theme-gradle .bg-9 {
+    background-color: #cb4b16;
+}
+.asciinema-theme-gradle .fg-10 {
+    color: #2dafc7;
+}
+.asciinema-theme-gradle .bg-10 {
+    background-color: #586e75;
+}
+.asciinema-theme-gradle .fg-11 {
+    color: #657c83;
+}
+.asciinema-theme-gradle .bg-11 {
+    background-color: #657c83;
+}
+.asciinema-theme-gradle .fg-12 {
+    color: #839496;
+}
+.asciinema-theme-gradle .bg-12 {
+    background-color: #839496;
+}
+.asciinema-theme-gradle .fg-13 {
+    color: #6c71c4;
+}
+.asciinema-theme-gradle .bg-13 {
+    background-color: #6c71c4;
+}
+.asciinema-theme-gradle .fg-14 {
+    color: #93a1a1;
+}
+.asciinema-theme-gradle .bg-14 {
+    background-color: #93a1a1;
+}
+.asciinema-theme-gradle .fg-15 {
+    color: #fdf6e3;
+}
+.asciinema-theme-gradle .bg-15 {
+    background-color: #fdf6e3;
+}

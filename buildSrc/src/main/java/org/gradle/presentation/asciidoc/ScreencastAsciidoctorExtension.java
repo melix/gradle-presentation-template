@@ -12,6 +12,6 @@ class ScreencastAsciidoctorExtension extends InlineMacroProcessor {
 
     @Override
     protected Object process(AbstractBlock parent, String target, Map<String, Object> attributes) {
-        return "<asciinema-player src=\"/" + target + ".cast\" class=\"stretch\"></asciinema-player>";
+        return "<asciinema-player src=\"/" + target + ".cast\" class=\"stretch\" theme=\"gradle\"></asciinema-player>";
     }
 }
