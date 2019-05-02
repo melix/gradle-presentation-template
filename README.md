@@ -27,6 +27,12 @@ Run:
 ./gradlew asciidoctor
 ```
 
+If you want to enable the watch mode, you can also run:
+
+```
+./gradlew asciidoctor --continous
+```
+
 ## Uploading the slides on GitHub pages
 
 Run:
