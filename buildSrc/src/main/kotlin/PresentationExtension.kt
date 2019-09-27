@@ -8,7 +8,7 @@ open class PresentationExtension(project: Project) {
     val githubUserName = project.property<String>()
     val githubRepoName = project.convention(project.name)
     val width = project.convention(1280)
-    val heigth = project.convention(700)
+    val height = project.convention(700)
     val theme = project.convention("gradle")
     val highlighter = project.convention("highlightjs")
 
