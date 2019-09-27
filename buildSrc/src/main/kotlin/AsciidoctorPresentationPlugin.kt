@@ -73,7 +73,7 @@ class AsciidoctorPresentationPlugin : Plugin<Project> {
                 dependsOn("asciidoctor")
                 main = "me.champeau.deck2pdf.Main"
                 workingDir = asciidocRevealOut.get().asFile
-                args = listOf("index.html", "$baseTypeDir/${project.name}.$type", "--profile=revealjs", "--width=${extension.width.get()}", "--height=${extension.heigth.get()}")
+                args = listOf("index.html", "$baseTypeDir/${project.name}.$type", "--profile=revealjs", "--width=${extension.width.get()}", "--height=${extension.height.get()}")
                 classpath = exportConfig
 
                 inputs.file("$workingDir/index.html")
@@ -128,7 +128,7 @@ class AsciidoctorPresentationPlugin : Plugin<Project> {
                         "basedir" to projectDir,
                         "docinfo1" to "",
                         "width" to extension.width.get(),
-                        "height" to extension.heigth.get(),
+                        "height" to extension.height.get(),
                         "project-version" to "1.0",
                         "revealjs_transition" to "linear",
                         "revealjs_history" to "true",
